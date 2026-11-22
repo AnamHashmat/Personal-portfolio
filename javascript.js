@@ -1,9 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Mobile navigation
-    const menuToggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
     if (menuToggle && navLinks) {
 
@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.classList.toggle("active");
         });
 
-        // Close mobile menu after clicking a navigation link
-        const navigationLinks = navLinks.querySelectorAll("a");
+        // Close menu when a link is clicked
+        const links = navLinks.querySelectorAll("a");
 
-        navigationLinks.forEach(function (link) {
+        links.forEach(function (link) {
             link.addEventListener("click", function () {
                 navLinks.classList.remove("active");
             });
@@ -22,15 +22,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    // Automatically update copyright year
-    const currentYear = document.getElementById("current-year");
+    // CURRENT YEAR
+    const yearElement = document.getElementById("year");
 
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
     }
 
-    // Back-to-top button
-    const backToTop = document.getElementById("back-to-top");
+    // BACK TO TOP
+    const backToTop = document.getElementById("backToTop");
 
     if (backToTop) {
 
@@ -45,42 +45,44 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         backToTop.addEventListener("click", function () {
+
             window.scrollTo({
                 top: 0,
                 behavior: "smooth"
             });
+
         });
 
     }
 
-    // Smooth navigation
-    const allNavigationLinks = document.querySelectorAll('a[href^="#"]');
-
-    allNavigationLinks.forEach(function (link) {
+    // SMOOTH SCROLL
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
 
         link.addEventListener("click", function (event) {
 
             const targetId = link.getAttribute("href");
 
-            if (targetId === "#") {
+            if (!targetId || targetId === "#") {
                 return;
             }
 
-            const targetElement = document.querySelector(targetId);
+            const target = document.querySelector(targetId);
 
-            if (targetElement) {
+            if (target) {
+
                 event.preventDefault();
 
-                targetElement.scrollIntoView({
+                target.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
                 });
+
             }
 
         });
 
     });
 
-    console.log("Anam Hashmat Portfolio Loaded Successfully!");
+    console.log("Portfolio JavaScript loaded successfully.");
 
 });
