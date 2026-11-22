@@ -1,169 +1,86 @@
-/* =========================================
-   ANAM HASHMAT PORTFOLIO
-   JavaScript Functionality
-========================================= */
 
+document.addEventListener("DOMContentLoaded", function () {
 
-// =========================================
-// MOBILE NAVIGATION
-// =========================================
+    // Mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-const menuToggle = document.getElementById("menu-toggle");
+    if (menuToggle && navLinks) {
 
-const navLinks = document.getElementById("nav-links");
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
 
+        // Close mobile menu after clicking a navigation link
+        const navigationLinks = navLinks.querySelectorAll("a");
 
-menuToggle.addEventListener("click", () => {
+        navigationLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+            });
+        });
 
-    const isOpen = navLinks.classList.toggle("open");
+    }
 
-    menuToggle.setAttribute(
-        "aria-expanded",
-        String(isOpen)
-    );
+    // Automatically update copyright year
+    const currentYear = document.getElementById("current-year");
 
-    menuToggle.innerHTML = isOpen
-        ? '<i class="fa-solid fa-xmark"></i>'
-        : '<i class="fa-solid fa-bars"></i>';
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
 
-});
+    // Back-to-top button
+    const backToTop = document.getElementById("back-to-top");
 
+    if (backToTop) {
 
-// Close mobile menu after clicking a link
+        window.addEventListener("scroll", function () {
 
-const navItems = document.querySelectorAll(".nav-link");
-
-navItems.forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        navLinks.classList.remove("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
-
-    });
-
-});
-
-
-// =========================================
-// AUTOMATIC FOOTER YEAR
-// =========================================
-
-document.getElementById("year").textContent =
-    new Date().getFullYear();
-
-
-// =========================================
-// SCROLL REVEAL ANIMATIONS
-// =========================================
-
-const revealObserver = new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add("visible");
-
-                revealObserver.unobserve(entry.target);
-
+            if (window.scrollY > 400) {
+                backToTop.classList.add("visible");
+            } else {
+                backToTop.classList.remove("visible");
             }
 
         });
 
-    },
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
 
-    {
-        threshold: 0.12
     }
 
-);
+    // Smooth navigation
+    const allNavigationLinks = document.querySelectorAll('a[href^="#"]');
 
+    allNavigationLinks.forEach(function (link) {
 
-document.querySelectorAll(".reveal").forEach(element => {
+        link.addEventListener("click", function (event) {
 
-    revealObserver.observe(element);
+            const targetId = link.getAttribute("href");
 
-});
+            if (targetId === "#") {
+                return;
+            }
 
+            const targetElement = document.querySelector(targetId);
 
-// =========================================
-// ACTIVE NAVIGATION SECTION
-// =========================================
+            if (targetElement) {
+                event.preventDefault();
 
-const sectionObserver = new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                const sectionId = entry.target.id;
-
-                navItems.forEach(link => {
-
-                    link.classList.toggle(
-                        "active",
-                        link.getAttribute("href") === `#${sectionId}`
-                    );
-
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
                 });
-
             }
 
         });
 
-    },
-
-    {
-        rootMargin: "-35% 0px -55% 0px"
-    }
-
-);
-
-
-document.querySelectorAll("main section[id]").forEach(section => {
-
-    sectionObserver.observe(section);
-
-});
-
-
-// =========================================
-// BACK TO TOP BUTTON
-// =========================================
-
-const backToTop = document.getElementById("back-to-top");
-
-
-window.addEventListener("scroll", () => {
-
-    backToTop.classList.toggle(
-        "visible",
-        window.scrollY > 450
-    );
-
-});
-
-
-backToTop.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
     });
+
+    console.log("Anam Hashmat Portfolio Loaded Successfully!");
 
 });
