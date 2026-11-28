@@ -4,109 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anam Hashmat's portfolio featuring AI, machine learning, data analytics, software projects and intelligent automation.">
+    <meta name="theme-color" content="#080b14">
 
-    <title>Anam Hashmat | AI & Data Solutions Professional</title>
-
-    <meta name="description" content="AI, Machine Learning, Generative AI, Data Analytics, FMCG AI Solutions, and intelligent application development by Anam Hashmat.">
+    <title>Anam Hashmat | AI, Machine Learning & Data Solutions</title>
 
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <script src="./javascript.js" defer></script>
 </head>
 
 <body>
 
-    <div class="background"></div>
+    <div class="background" aria-hidden="true"></div>
 
     <!-- NAVIGATION -->
     <header>
-        <nav class="navbar container">
+        <nav class="navbar container" aria-label="Main navigation">
 
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" data-page-link="home">
                 <span class="logo-icon">A</span>
                 <span>ANAM HASHMAT</span>
             </a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
                 ☰
             </button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#innovation">Innovation</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact" class="contact-nav">Contact</a></li>
+                <li><a href="#home" data-page-link="home">Home</a></li>
+                <li><a href="#about" data-page-link="about">About</a></li>
+                <li><a href="#skills" data-page-link="skills">Skills</a></li>
+                <li><a href="#projects" data-page-link="projects">Projects</a></li>
+                <li><a href="#ml-lab" data-page-link="ml-lab">ML Lab</a></li>
+                <li><a href="#innovation" data-page-link="innovation">Innovation</a></li>
+                <li><a href="#education" data-page-link="education">Education</a></li>
+                <li><a href="#contact" data-page-link="contact" class="contact-nav">Contact</a></li>
             </ul>
 
         </nav>
     </header>
 
-    <main>
 
-        <!-- HERO -->
-        <section class="hero container" id="home">
+    <main id="pageContent">
 
-            <div class="hero-text">
+        <!-- =====================================
+             HOME PAGE - REDESIGNED
+        ====================================== -->
 
-                <span class="eyebrow">
+        <section class="hero hero-redesign container page-section"
+                 data-page="home"
+                 id="home">
+
+            <div class="hero-background-effects" aria-hidden="true">
+                <span class="glow-orb orb-one"></span>
+                <span class="glow-orb orb-two"></span>
+                <span class="glow-orb orb-three"></span>
+                <div class="hero-grid-pattern"></div>
+            </div>
+
+            <!-- INTRODUCTION -->
+            <div class="hero-text hero-content">
+
+                <div class="hero-badge">
+                    <span class="status-dot"></span>
                     AI & TECHNOLOGY PROFESSIONAL
-                </span>
+                </div>
 
-                <h1>
-                    Anam Hashmat
-                    <span class="gradient-text">
-                        Intelligence. Innovation. Solutions.
-                    </span>
+                <p class="hero-intro">HELLO, WORLD! I'M</p>
+
+                <h1 class="hero-main-title">
+                    Anam
+                    <span class="gradient-text">Hashmat.</span>
                 </h1>
 
-                <p class="hero-description">
-                    Mathematics-driven technology professional specializing
-                    in Artificial Intelligence, Machine Learning, Data
-                    Analytics, Generative AI, and intelligent business
-                    solutions.
-                </p>
+                <div class="hero-role">
+                    <span class="role-line"></span>
+                    <span>AI · MACHINE LEARNING · DATA SOLUTIONS</span>
+                </div>
 
                 <p class="hero-description">
-                    Combining analytical thinking, computational methods,
-                    and emerging technologies to transform complex problems
-                    into practical digital solutions.
+                    I transform mathematical thinking into intelligent
+                    digital solutions through Artificial Intelligence,
+                    Machine Learning, Generative AI and Data Analytics.
+                </p>
+
+                <p class="hero-description hero-description-secondary">
+                    Exploring the intersection of mathematics,
+                    technology and innovation to solve real-world
+                    challenges.
                 </p>
 
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
-                        Explore Projects ↗
+
+                    <a class="btn btn-primary hero-cta" href="#projects">
+                        Explore My Work <span>↗</span>
                     </a>
 
-                    <a href="#contact" class="btn btn-outline">
-                        Contact Me
+                    <a class="btn btn-outline hero-cta" href="#contact">
+                        Let's Connect
                     </a>
+
                 </div>
 
-                <div class="social-links">
-                    <a href="https://github.com/AnamHashmat" target="_blank">
+                <div class="hero-social">
+
+                    <span>FIND ME ON</span>
+
+                    <a href="https://github.com/AnamHashmat"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         GitHub ↗
                     </a>
 
-                    <a href="https://www.linkedin.com/in/anam-hashmat-6704752b8/" target="_blank">
+                    <a href="https://www.linkedin.com/in/anam-hashmat-6704752b8/"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         LinkedIn ↗
                     </a>
+
                 </div>
 
             </div>
 
-            <div class="hero-visual">
 
-                <div class="profile-card">
+            <!-- ANIMATED PROFILE VISUAL -->
+            <div class="hero-visual hero-visual-redesign">
 
-                    <div class="profile-status">
-                        <span class="status-dot"></span>
-                        TECHNOLOGY & INNOVATION
+                <div class="hero-orbit orbit-outer"></div>
+                <div class="hero-orbit orbit-inner"></div>
+
+                <div class="floating-symbol symbol-one">∑</div>
+                <div class="floating-symbol symbol-two">AI</div>
+                <div class="floating-symbol symbol-three">{ }</div>
+                <div class="floating-symbol symbol-four">✳</div>
+
+                <div class="profile-card profile-card-redesign">
+
+                    <div class="profile-card-top">
+
+                        <span class="profile-indicator">
+                            <span class="status-dot"></span>
+                            AVAILABLE FOR INNOVATION
+                        </span>
+
+                        <span class="profile-card-code">AH / 01</span>
+
                     </div>
 
-                    <div class="avatar">
-                        AH
+                    <div class="profile-avatar-wrapper">
+
+                        <div class="avatar-glow"></div>
+
+                        <div class="avatar avatar-redesign">
+                            AH
+                        </div>
+
                     </div>
 
                     <h2>Anam Hashmat</h2>
@@ -115,28 +170,53 @@
                         AI & Data Solutions Professional
                     </p>
 
-                    <div class="profile-tags">
-                        <span>AI</span>
+                    <div class="profile-divider"></div>
+
+                    <div class="profile-specialities">
+                        <span>Artificial Intelligence</span>
                         <span>Machine Learning</span>
                         <span>Generative AI</span>
                         <span>Data Analytics</span>
-                        <span>Business Intelligence</span>
                         <span>Mathematics</span>
+                        <span>Automation</span>
                     </div>
 
-                    <p class="profile-footer">
-                        Transforming mathematical thinking into
-                        intelligent, data-driven solutions.
-                    </p>
+                    <div class="profile-card-footer">
+                        <span>THINK · BUILD · INNOVATE</span>
+                        <span class="footer-sparkle">✦</span>
+                    </div>
 
+                </div>
+
+                <div class="floating-info info-top">
+                    <span class="info-icon">⌘</span>
+                    <span>Intelligent Solutions</span>
+                </div>
+
+                <div class="floating-info info-bottom">
+                    <span class="info-icon">∑</span>
+                    <span>Mathematical Thinking</span>
                 </div>
 
             </div>
 
+
+            <!-- SCROLL INDICATOR -->
+            <div class="hero-scroll-indicator">
+                <span class="scroll-line"></span>
+                <span>SCROLL TO EXPLORE</span>
+            </div>
+
         </section>
 
-        <!-- ABOUT -->
-        <section class="section container" id="about">
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
+        <section class="section container page-section"
+                 data-page="about"
+                 id="about">
 
             <div class="section-heading">
                 <span class="section-label">ABOUT ME</span>
@@ -203,20 +283,29 @@
 
         </section>
 
-        <!-- SKILLS -->
-        <section class="section container" id="skills">
+
+        <!-- =====================================
+             SKILLS
+        ====================================== -->
+
+        <section class="section container page-section"
+                 data-page="skills"
+                 id="skills">
 
             <div class="section-heading">
+
                 <span class="section-label">TECHNICAL CAPABILITIES</span>
 
                 <h2>
-                    Skills & <span class="gradient-text">Expertise</span>
+                    Skills &amp;
+                    <span class="gradient-text">Expertise</span>
                 </h2>
 
                 <p>
                     A multidisciplinary toolkit for developing
                     intelligent applications and data-driven solutions.
                 </p>
+
             </div>
 
             <div class="skills-grid">
@@ -238,7 +327,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">📊</div>
-                    <h3>Data & Analytics</h3>
+                    <h3>Data &amp; Analytics</h3>
                     <div class="tags">
                         <span>Data Analysis</span>
                         <span>Data Visualization</span>
@@ -253,7 +342,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">💻</div>
-                    <h3>Programming & Development</h3>
+                    <h3>Programming &amp; Development</h3>
                     <div class="tags">
                         <span>Python</span>
                         <span>Java</span>
@@ -281,7 +370,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">📐</div>
-                    <h3>Mathematics & Computation</h3>
+                    <h3>Mathematics &amp; Computation</h3>
                     <div class="tags">
                         <span>Calculus</span>
                         <span>Linear Algebra</span>
@@ -295,7 +384,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">🏭</div>
-                    <h3>Business & Industry</h3>
+                    <h3>Business &amp; Industry</h3>
                     <div class="tags">
                         <span>FMCG Analytics</span>
                         <span>Supply Chain</span>
@@ -308,7 +397,7 @@
 
                 <div class="skill-card">
                     <div class="skill-icon">🛠️</div>
-                    <h3>Tools & Platforms</h3>
+                    <h3>Tools &amp; Platforms</h3>
                     <div class="tags">
                         <span>VS Code</span>
                         <span>Git</span>
@@ -324,38 +413,43 @@
 
         </section>
 
-        <!-- PROJECTS -->
-        <section class="section container" id="projects">
+
+        <!-- =====================================
+             PROJECTS
+        ====================================== -->
+
+        <section class="section container page-section"
+                 data-page="projects"
+                 id="projects">
 
             <div class="section-heading">
+
                 <span class="section-label">PORTFOLIO</span>
 
                 <h2>
-                    Featured <span class="gradient-text">Projects</span>
+                    Featured
+                    <span class="gradient-text">Projects</span>
                 </h2>
 
                 <p>
                     Applications, intelligent systems, analytics,
                     and software solutions.
                 </p>
+
             </div>
 
             <div class="projects-grid">
 
                 <article class="project-card">
-
                     <div class="project-header">
                         <span class="project-number">01</span>
                         <span class="project-status live">LIVE</span>
                     </div>
 
                     <div class="project-icon">📚</div>
-
                     <h3>Document Intelligence Assistant</h3>
 
-                    <p class="project-type">
-                        Generative AI · RAG · NLP
-                    </p>
+                    <p class="project-type">Generative AI · RAG · NLP</p>
 
                     <p class="project-description">
                         An intelligent document question-answering
@@ -372,27 +466,25 @@
                         <span>Document AI</span>
                     </div>
 
-                    <a href="https://document-intelligence-assistant-rho.vercel.app/"
-                       target="_blank" class="project-link">
+                    <a class="project-link"
+                       href="https://document-intelligence-assistant-rho.vercel.app/"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Explore Application ↗
                     </a>
-
                 </article>
 
-                <article class="project-card">
 
+                <article class="project-card">
                     <div class="project-header">
                         <span class="project-number">02</span>
                         <span class="project-status live">LIVE</span>
                     </div>
 
                     <div class="project-icon">✨</div>
-
                     <h3>AI Text Summarizer</h3>
 
-                    <p class="project-type">
-                        Generative AI · NLP
-                    </p>
+                    <p class="project-type">Generative AI · NLP</p>
 
                     <p class="project-description">
                         An AI-powered web application that transforms
@@ -407,27 +499,25 @@
                         <span>Web Application</span>
                     </div>
 
-                    <a href="https://anamhashmat.github.io/ai-text-summarizer/"
-                       target="_blank" class="project-link">
+                    <a class="project-link"
+                       href="https://anamhashmat.github.io/ai-text-summarizer/"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         View Application ↗
                     </a>
-
                 </article>
 
-                <article class="project-card">
 
+                <article class="project-card">
                     <div class="project-header">
                         <span class="project-number">03</span>
                         <span class="project-status live">LIVE</span>
                     </div>
 
                     <div class="project-icon">🏭</div>
-
                     <h3>FMCG AI Solutions</h3>
 
-                    <p class="project-type">
-                        AI · Business Intelligence
-                    </p>
+                    <p class="project-type">AI · Business Intelligence</p>
 
                     <p class="project-description">
                         An intelligent FMCG-focused digital solution
@@ -443,17 +533,330 @@
                         <span>Business Solutions</span>
                     </div>
 
-                    <a href="https://1fmcgapp1.ai.studio/"
-                       target="_blank" class="project-link">
+                    <a class="project-link"
+                       href="https://1fmcgapp1.ai.studio/"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         Explore FMCG Solution ↗
                     </a>
-
                 </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">05</span>
+                        <span class="project-status">GITHUB</span>
+                    </div>
+
+                    <div class="project-icon">🌱</div>
+                    <h3>Fertilizer Company Management System</h3>
+
+                    <p class="project-type">Software Development · Database</p>
+
+                    <p class="project-description">
+                        A management system designed to support
+                        fertilizer company operations through
+                        organized data management and software
+                        functionality.
+                    </p>
+
+                    <div class="tags">
+                        <span>Programming</span>
+                        <span>Database</span>
+                        <span>Management System</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://github.com/AnamHashmat/Fertilizer-company-management-system"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View on GitHub ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">06</span>
+                        <span class="project-status">GITHUB</span>
+                    </div>
+
+                    <div class="project-icon">☕</div>
+                    <h3>Daily Brew</h3>
+
+                    <p class="project-type">Web Development</p>
+
+                    <p class="project-description">
+                        A web-based coffee project focused on
+                        product presentation, user interface
+                        design, and web development.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Web Design</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://github.com/AnamHashmat/daily-brew"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View on GitHub ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">07</span>
+                        <span class="project-status">GITHUB</span>
+                    </div>
+
+                    <div class="project-icon">🎬</div>
+                    <h3>Movie Booking System</h3>
+
+                    <p class="project-type">Software Development</p>
+
+                    <p class="project-description">
+                        A software project focused on movie
+                        booking functionality, application
+                        logic, and user interaction.
+                    </p>
+
+                    <div class="tags">
+                        <span>Programming</span>
+                        <span>OOP</span>
+                        <span>Application Logic</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://github.com/AnamHashmat/Movie_Booking_system"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View on GitHub ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">08</span>
+                        <span class="project-status">GITHUB</span>
+                    </div>
+
+                    <div class="project-icon">💚</div>
+                    <h3>Health &amp; Fitness Tracker</h3>
+
+                    <p class="project-type">Application Development</p>
+
+                    <p class="project-description">
+                        A digital application project focused on
+                        health-related tracking, organized
+                        information, and user-oriented functionality.
+                    </p>
+
+                    <div class="tags">
+                        <span>Programming</span>
+                        <span>Application</span>
+                        <span>Data Management</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://github.com/AnamHashmat/Health-and-Fitness-Tracker"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        View on GitHub ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">09</span>
+                        <span class="project-status live">LIVE</span>
+                    </div>
+
+                    <div class="project-icon">📊</div>
+                    <h3>Student Progress Report Portal</h3>
+
+                    <p class="project-type">
+                        Web Development · Student Reporting
+                    </p>
+
+                    <p class="project-description">
+                        A web portal for organising and viewing
+                        student progress reports and academic
+                        reporting information.
+                    </p>
+
+                    <div class="tags">
+                        <span>Web Portal</span>
+                        <span>Student Reporting</span>
+                        <span>GitHub Pages</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://anamhashmat.github.io/Student-progress-report-portal/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Open Portal ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">10</span>
+                        <span class="project-status live">LIVE</span>
+                    </div>
+
+                    <div class="project-icon">⚙️</div>
+                    <h3>Student Progress Report Submission</h3>
+
+                    <p class="project-type">
+                        Workflow Automation · n8n
+                    </p>
+
+                    <p class="project-description">
+                        A form-based submission workflow for collecting
+                        progress-report files and passing submitted
+                        information into an automated process.
+                    </p>
+
+                    <div class="tags">
+                        <span>n8n</span>
+                        <span>Forms</span>
+                        <span>Workflow Automation</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://student-progress-tracker.app.n8n.cloud/form/6633f485-766d-43d4-b811-3e8b106a4b0c"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Open Submission Form ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">11</span>
+                        <span class="project-status live">LIVE</span>
+                    </div>
+
+                    <div class="project-icon">🤖</div>
+                    <h3>Departmental Assistant</h3>
+
+                    <p class="project-type">
+                        AI Assistant · Workflow Automation
+                    </p>
+
+                    <p class="project-description">
+                        A departmental assistant application designed
+                        to support information access and routine
+                        departmental workflows.
+                    </p>
+
+                    <div class="tags">
+                        <span>AI Assistant</span>
+                        <span>Zapier</span>
+                        <span>Automation</span>
+                    </div>
+
+                    <a class="project-link"
+                       href="https://departmental-assistant.zapier.app"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Launch Assistant ↗
+                    </a>
+                </article>
+
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-number">12</span>
+                        <span class="project-status developing">
+                            IN DEVELOPMENT
+                        </span>
+                    </div>
+
+                    <div class="project-icon">📝</div>
+                    <h3>Exam Website</h3>
+
+                    <p class="project-type">
+                        Web Development · In Progress
+                    </p>
+
+                    <p class="project-description">
+                        An examination website currently under
+                        development. More details and a live link
+                        will be added when the project is ready.
+                    </p>
+
+                    <div class="tags">
+                        <span>Examination</span>
+                        <span>Web Development</span>
+                        <span>In Progress</span>
+                    </div>
+
+                    <span class="project-link">
+                        Currently in development
+                    </span>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             MACHINE LEARNING LAB
+        ====================================== -->
+
+        <section class="section container page-section"
+                 id="ml-lab"
+                 data-page="ml-lab">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    MACHINE LEARNING WORKSPACE
+                </span>
+
+                <h2>
+                    ML <span class="gradient-text">Lab</span>
+                </h2>
+
+                <p>
+                    A focused space for projects involving predictive
+                    modelling and machine-learning methods. Projects
+                    are labelled by their actual development status.
+                </p>
+
+            </div>
+
+            <div class="ml-note">
+
+                <strong>What belongs here?</strong>
+
+                <p>
+                    Projects that involve a defined machine-learning
+                    task, data-driven model or predictive method.
+                    General websites and workflow automations remain
+                    in Featured Projects rather than being presented
+                    as ML models.
+                </p>
+
+            </div>
+
+            <div class="projects-grid">
 
                 <article class="project-card">
 
                     <div class="project-header">
                         <span class="project-number">04</span>
+
                         <span class="project-status developing">
                             IN DEVELOPMENT
                         </span>
@@ -483,145 +886,8 @@
                     </div>
 
                     <span class="project-link">
-                        Research & Development
+                        Research &amp; Development
                     </span>
-
-                </article>
-
-                <article class="project-card">
-
-                    <div class="project-header">
-                        <span class="project-number">05</span>
-                        <span class="project-status">GITHUB</span>
-                    </div>
-
-                    <div class="project-icon">🌱</div>
-
-                    <h3>Fertilizer Company Management System</h3>
-
-                    <p class="project-type">
-                        Software Development · Database
-                    </p>
-
-                    <p class="project-description">
-                        A management system designed to support
-                        fertilizer company operations through
-                        organized data management and software
-                        functionality.
-                    </p>
-
-                    <div class="tags">
-                        <span>Programming</span>
-                        <span>Database</span>
-                        <span>Management System</span>
-                    </div>
-
-                    <a href="https://github.com/AnamHashmat/Fertilizer-company-management-system"
-                       target="_blank" class="project-link">
-                        View on GitHub ↗
-                    </a>
-
-                </article>
-
-                <article class="project-card">
-
-                    <div class="project-header">
-                        <span class="project-number">06</span>
-                        <span class="project-status">GITHUB</span>
-                    </div>
-
-                    <div class="project-icon">☕</div>
-
-                    <h3>Daily Brew</h3>
-
-                    <p class="project-type">
-                        Web Development
-                    </p>
-
-                    <p class="project-description">
-                        A web-based coffee project focused on
-                        product presentation, user interface
-                        design, and web development.
-                    </p>
-
-                    <div class="tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>Web Design</span>
-                    </div>
-
-                    <a href="https://github.com/AnamHashmat/daily-brew"
-                       target="_blank" class="project-link">
-                        View on GitHub ↗
-                    </a>
-
-                </article>
-
-                <article class="project-card">
-
-                    <div class="project-header">
-                        <span class="project-number">07</span>
-                        <span class="project-status">GITHUB</span>
-                    </div>
-
-                    <div class="project-icon">🎬</div>
-
-                    <h3>Movie Booking System</h3>
-
-                    <p class="project-type">
-                        Software Development
-                    </p>
-
-                    <p class="project-description">
-                        A software project focused on movie
-                        booking functionality, application
-                        logic, and user interaction.
-                    </p>
-
-                    <div class="tags">
-                        <span>Programming</span>
-                        <span>OOP</span>
-                        <span>Application Logic</span>
-                    </div>
-
-                    <a href="https://github.com/AnamHashmat/Movie_Booking_system"
-                       target="_blank" class="project-link">
-                        View on GitHub ↗
-                    </a>
-
-                </article>
-
-                <article class="project-card">
-
-                    <div class="project-header">
-                        <span class="project-number">08</span>
-                        <span class="project-status">GITHUB</span>
-                    </div>
-
-                    <div class="project-icon">💚</div>
-
-                    <h3>Health & Fitness Tracker</h3>
-
-                    <p class="project-type">
-                        Application Development
-                    </p>
-
-                    <p class="project-description">
-                        A digital application project focused on
-                        health-related tracking, organized
-                        information, and user-oriented functionality.
-                    </p>
-
-                    <div class="tags">
-                        <span>Programming</span>
-                        <span>Application</span>
-                        <span>Data Management</span>
-                    </div>
-
-                    <a href="https://github.com/AnamHashmat/Health-and-Fitness-Tracker"
-                       target="_blank" class="project-link">
-                        View on GitHub ↗
-                    </a>
 
                 </article>
 
@@ -629,14 +895,22 @@
 
         </section>
 
-        <!-- INNOVATION -->
-        <section class="section container" id="innovation">
+
+        <!-- =====================================
+             INNOVATION
+        ====================================== -->
+
+        <section class="section container page-section"
+                 data-page="innovation"
+                 id="innovation">
 
             <div class="section-heading">
+
                 <span class="section-label">FUTURE TECHNOLOGY</span>
 
                 <h2>
-                    Exploring <span class="gradient-text">Innovation</span>
+                    Exploring
+                    <span class="gradient-text">Innovation</span>
                 </h2>
 
                 <p>
@@ -644,6 +918,7 @@
                     in mathematics, business, intelligence,
                     and digital transformation.
                 </p>
+
             </div>
 
             <div class="innovation-grid">
@@ -712,15 +987,24 @@
 
         </section>
 
-        <!-- EDUCATION -->
-        <section class="section container" id="education">
+
+        <!-- =====================================
+             EDUCATION
+        ====================================== -->
+
+        <section class="section container page-section"
+                 data-page="education"
+                 id="education">
 
             <div class="section-heading">
+
                 <span class="section-label">ACADEMIC BACKGROUND</span>
 
                 <h2>
-                    Mathematical <span class="gradient-text">Foundation</span>
+                    Mathematical
+                    <span class="gradient-text">Foundation</span>
                 </h2>
+
             </div>
 
             <div class="education-card">
@@ -757,8 +1041,14 @@
 
         </section>
 
-        <!-- CONTACT -->
-        <section class="section container" id="contact">
+
+        <!-- =====================================
+             CONTACT
+        ====================================== -->
+
+        <section class="section container page-section"
+                 data-page="contact"
+                 id="contact">
 
             <div class="contact-box">
 
@@ -780,18 +1070,22 @@
 
                 <div class="contact-buttons">
 
-                    <a href="mailto:anamhashmat77@gmail.com"
-                       class="btn btn-primary">
+                    <a class="btn btn-primary"
+                       href="mailto:anamhashmat77@gmail.com">
                         Email Me ↗
                     </a>
 
-                    <a href="https://www.linkedin.com/in/anam-hashmat-6704752b8/"
-                       target="_blank" class="btn btn-outline">
+                    <a class="btn btn-outline"
+                       href="https://www.linkedin.com/in/anam-hashmat-6704752b8/"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         LinkedIn ↗
                     </a>
 
-                    <a href="https://github.com/AnamHashmat"
-                       target="_blank" class="btn btn-outline">
+                    <a class="btn btn-outline"
+                       href="https://github.com/AnamHashmat"
+                       target="_blank"
+                       rel="noopener noreferrer">
                         GitHub ↗
                     </a>
 
@@ -809,7 +1103,8 @@
                     <div>
                         <span>LINKEDIN</span>
                         <a href="https://www.linkedin.com/in/anam-hashmat-6704752b8/"
-                           target="_blank">
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Professional Profile ↗
                         </a>
                     </div>
@@ -817,7 +1112,8 @@
                     <div>
                         <span>GITHUB</span>
                         <a href="https://github.com/AnamHashmat"
-                           target="_blank">
+                           target="_blank"
+                           rel="noopener noreferrer">
                             Repositories ↗
                         </a>
                     </div>
@@ -830,11 +1126,16 @@
 
     </main>
 
-    <!-- FOOTER -->
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
     <footer>
+
         <div class="container footer-content">
 
-            <a href="#home" class="logo">
+            <a href="#home" class="logo" data-page-link="home">
                 <span class="logo-icon">A</span>
                 <span>ANAM HASHMAT</span>
             </a>
@@ -847,8 +1148,11 @@
             </p>
 
         </div>
+
     </footer>
 
+
+    <!-- BACK TO TOP -->
     <button id="backToTop" aria-label="Back to top">
         ↑
     </button>
